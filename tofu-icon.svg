@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <g id="tofu-icon" transform="translate(-156 -156)">
+    <rect id="body" width="200" height="200" rx="50" transform="translate(156 156)" fill="#fff2df"/>
+    <g id="smile">
+      <path id="Path_4" data-name="Path 4" d="M22.281,25.879c11.07,0,22-8.787,22-15.579A12.3,12.3,0,0,0,31.979-2H12.3A12.3,12.3,0,0,0,0,10.3C0,17.092,11.212,25.879,22.281,25.879Z" transform="translate(234 286)" fill="#fcd1a6"/>
+      <path id="Subtraction_1" data-name="Subtraction 1" d="M10.9,25.015h0C4.482,21.785,0,16.556,0,12.3A12.3,12.3,0,0,1,12.3,0H31.979a12.3,12.3,0,0,1,12.3,12.3,10.849,10.849,0,0,1-2.914,6.674,25.04,25.04,0,0,1-7.4,5.84C31.983,21.889,27.481,20,22.5,20c-5.131,0-9.685,1.968-11.6,5.014Z" transform="translate(234 284)" fill="#ba602b"/>
+    </g>
+    <g id="freckles" transform="translate(-6 4)">
+      <circle id="Ellipse_6" data-name="Ellipse 6" cx="2" cy="2" r="2" transform="translate(290 265)" fill="#fcd1a6"/>
+      <circle id="Ellipse_7" data-name="Ellipse 7" cx="2" cy="2" r="2" transform="translate(294 259)" fill="#fcd1a6"/>
+      <circle id="Ellipse_8" data-name="Ellipse 8" cx="2" cy="2" r="2" transform="translate(286 259)" fill="#fcd1a6"/>
+    </g>
+    <g id="freckles-2" data-name="freckles" transform="translate(8 -2)">
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="2" cy="2" r="2" transform="translate(217 271)" fill="#fcd1a6"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="2" cy="2" r="2" transform="translate(221 265)" fill="#fcd1a6"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="2" cy="2" r="2" transform="translate(213 265)" fill="#fcd1a6"/>
+    </g>
+    <path id="eye" d="M10.056,17H7.5A7.508,7.508,0,0,1,0,9.5C0,7.495,1.593,5.138,4.262,3.2A16.307,16.307,0,0,1,13.586,0a15.957,15.957,0,0,1,9.238,3.2C25.439,5.132,27,7.488,27,9.5a7.514,7.514,0,0,1-6.028,7.355A2.278,2.278,0,0,0,21,16.5c0-1.93-2.467-3.5-5.5-3.5S10,14.57,10,16.5a2.284,2.284,0,0,0,.056.5Z" transform="translate(278 226)" fill="#ba602b"/>
+    <path id="eye-2" data-name="eye" d="M10.056,17H7.5A7.508,7.508,0,0,1,0,9.5C0,7.495,1.593,5.138,4.262,3.2A16.307,16.307,0,0,1,13.586,0a15.957,15.957,0,0,1,9.238,3.2C25.439,5.132,27,7.488,27,9.5a7.514,7.514,0,0,1-6.028,7.355A2.278,2.278,0,0,0,21,16.5c0-1.93-2.467-3.5-5.5-3.5S10,14.57,10,16.5a2.284,2.284,0,0,0,.056.5Z" transform="translate(207 226)" fill="#ba602b"/>
+    <g id="holes">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="5" cy="5" r="5" transform="translate(319 173)" fill="#fcd1a6"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="8" cy="8" r="8" transform="translate(326 185)" fill="#fcd1a6"/>
+    </g>
+  </g>
+</svg>
