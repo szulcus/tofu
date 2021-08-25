@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <g id="tofu-icon" transform="translate(-156 -156)">
+    <rect id="body" width="200" height="200" rx="60" transform="translate(156 156)" fill="#fff2df"/>
+    <g id="holes" transform="translate(-13)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="7" cy="7" r="7" transform="translate(319 173)" fill="#fcd1a6"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="11.5" cy="11.5" r="11.5" transform="translate(329 190)" fill="#fcd1a6"/>
+    </g>
+  </g>
+</svg>

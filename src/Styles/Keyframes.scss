@@ -1,0 +1,93 @@
+@keyframes bounce {
+	0% {
+		opacity: 0;
+		transform: scale(0.8)
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.1)
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1)
+	}
+}
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes opacityReverse {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes bottomElation {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes rightElation {
+	0% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+// COMPONENTS
+@keyframes preloader {
+	0% {
+		bottom: -50vh;
+		left: 50%;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(2.8);
+	}
+	20% {
+		bottom: -50vh;
+		left: 50%;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(3);
+	}
+	40% {
+		bottom: -50vh;
+		left: 50%;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(3);
+	}
+	50% {
+		bottom: -50vh;
+		left: 50%;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(3);
+	}
+	100% {
+		bottom: 0;
+		left: 20px;
+		opacity: 1;
+		transform: translate(0, 0) scale(1);
+	}
+}
+@keyframes mobileMenu {
+	0% {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}

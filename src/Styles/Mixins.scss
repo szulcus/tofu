@@ -1,0 +1,45 @@
+@mixin hover {
+	cursor: pointer;
+	@media (hover:hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+@mixin mhover {
+	@media (hover:none) {
+		@content;
+	}
+}
+
+@mixin line {
+	position: relative;
+	display: inline-block;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 30%;
+		height: 3px;
+		background-color: $decorative;
+		border-radius: 3px;
+		transform: translateX(-50%);
+	}
+}
+
+@mixin scroll() {
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $decorative;
+	}
+}
+
+@mixin ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
