@@ -4,31 +4,31 @@
 			<div class="results">
 				<h1 class="results__title">Wyniki</h1>
 				<div class="results__compare">
-					<ul class="results__list">
-						<h2 class="results__subtitle">Dobrze:</h2>
+					<ul class="compare__list">
+						<h2 class="list__subtitle">Dobrze:</h2>
 						<li
 							v-for="(question, index) in results.correct"
 							:key="index"
-							class="results__list__item"
+							class="list__item"
 						>
 							Czy {{friendNick}} {{question.refunds.indirect}} <span class="answer">{{question.answer === '+' ? 'Tak!' : 'Nie!'}}</span>
 						</li>
-						<div class="results__list__sum">Razem: <span class="sum__number">{{results.correct.length}}</span></div>
+						<div class="list__sum">Razem: <span class="sum__number">{{results.correct.length}}</span></div>
 					</ul>
-					<ul class="results__list">
-						<h2 class="results__subtitle">Niedobrze:</h2>
+					<ul class="compare__list">
+						<h2 class="list__subtitle">Niedobrze:</h2>
 						<li
 							v-for="(question, index) in results.incorrect"
 							:key="index"
-							class="results__list__item"
+							class="list__item"
 						>
 							Czy {{friendNick}} {{question.refunds.indirect}} <span class="answer">{{question.answer === '+' ? 'Tak!' : 'Nie!'}}</span>
 						</li>
-						<div class="results__list__sum">Razem: <span class="sum__number">{{results.incorrect.length}}</span></div>
+						<div class="list__sum">Razem: <span class="sum__number">{{results.incorrect.length}}</span></div>
 					</ul>
 				</div>
 				<div class="results__answer">
-					<div class="results__answer__content">Znasz swojego przyjaciela w <span class="results__percents">{{results.percents}}%</span>. Gratulacje!</div>
+					<div class="answer__content">Znasz swojego przyjaciela w <span class="results__percents">{{results.percents}}%</span>. Gratulacje!</div>
 					<Button content="Ok!" @click="$router.push({name: 'Home'})" />
 				</div>
 			</div>
@@ -51,10 +51,10 @@
 						<fa-icon icon="angle-right" />
 					</div>
 					<div class="question__title" @click="questionPreview = !questionPreview">
-						<div :class="['question__title__content', {'question__title__content--ellipsis': !questionPreview}]">Czy {{friendNick}} {{questions[activeIndex].refunds.indirect}}</div>
+						<div :class="['title__content', {'title__content--ellipsis': !questionPreview}]">Czy {{friendNick}} {{questions[activeIndex].refunds.indirect}}</div>
 						<fragment v-if="windowWidth < 800">
-							<fa-icon v-if="!questionPreview" class="question__title__icon" icon="angle-down" />
-							<fa-icon v-else class="question__title__icon" icon="angle-up" />
+							<fa-icon v-if="!questionPreview" class="title__icon" icon="angle-down" />
+							<fa-icon v-else class="title__icon" icon="angle-up" />
 						</fragment>
 					</div>
 					<div class="question__image" v-bg="questions[activeIndex].img" />
@@ -75,7 +75,7 @@
 				<div v-else class="question">
 					<div>
 						<div class="question__title">
-							<div class="question__title__content">Nie ma takiego użytkownika!</div>
+							<div class="title__content">Nie ma takiego użytkownika!</div>
 						</div>
 						<div class="question__offer">
 							Może poszukamy kogoś innego?
@@ -263,7 +263,7 @@
 					max-height: 750px;
 					grid-template-columns: 1fr 1fr;
 				}
-				.results__list {
+				.compare__list {
 					height: auto;
 					width: 100%;
 					max-width: 550px;
@@ -277,7 +277,7 @@
 						@include scroll;
 					}
 					&:nth-child(1) {
-						.results__subtitle {
+						.list__subtitle {
 							&::first-letter {
 								color: $correct;
 							}
@@ -287,7 +287,7 @@
 						}
 					}
 					&:nth-child(2) {
-						.results__subtitle {
+						.list__subtitle {
 							&::first-letter {
 								color: $incorrect;
 							}
@@ -300,10 +300,10 @@
 						
 						width: 100%;
 					}
-					.results__subtitle {
+					.list__subtitle {
 						margin: 10px 0;
 					}
-					.results__list__item {
+					.list__item {
 						font-size: 20px;
 						.question {
 							display: block;
@@ -314,7 +314,7 @@
 							font-weight: bold;
 						}
 					}
-					.results__list__sum {
+					.list__sum {
 						font-size: 23px;
 						padding-top: 10px;
 						font-weight: bold;
@@ -329,7 +329,7 @@
 			}
 			.results__answer {
 				padding-bottom: 50px;
-				.results__answer__content {
+				.answer__content {
 					font-weight: bold;
 					font-size: 25px;
 					margin-bottom: 10px;
@@ -411,16 +411,16 @@
 				&::first-letter {
 					color: $decorative;
 				}
-				.question__title__content {
+				.title__content {
 					width: 100%;
 					font-size: 23px;
 					font-weight: bold;
 					user-select: none;
 				}
-				.question__title__content--ellipsis {
+				.title__content--ellipsis {
 					@include ellipsis;
 				}
-				.question__title__icon {
+				.title__icon {
 					font-size: 23px;
 					display: block;
 					margin: -5px auto 0 auto;

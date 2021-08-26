@@ -1,10 +1,9 @@
 <template>
 	<fragment>
 		<div class="view" :style="{animation: !$loaded ? 'bottomElation 0.5s 1s both' : 'bottomElation 0.5s both'}">
-			<form v-if="!quizLink" class="test-form" @submit.prevent="save">
-				<input v-model="username" class="input-name" placeholder="Wpisz nick..." type="text" required />
-				<div v-if="questions" class="question__mobile">{{questions[activeIndex].refunds.direct}} </div>
-				<div v-if="questions" :class="['question', {'answer-yes': questions[activeIndex].answer === '+', 'answer-no': questions[activeIndex].answer === '-'}]">
+			<form v-if="!quizLink" class="view__form" @submit.prevent="save">
+				<input v-model="username" class="form__input" placeholder="Wpisz nick..." type="text" required />
+				<div v-if="questions" :class="['form__question', {'answer-yes': questions[activeIndex].answer === '+', 'answer-no': questions[activeIndex].answer === '-'}]">
 					<div class="question__nav" @click="indexDown">
 						<fa-icon icon="angle-left" />
 					</div>
@@ -62,7 +61,7 @@
 			:refunds="questions[activeIndex].refunds"
 			:img="questions[activeIndex].img"
 			@close="createModalActive = !createModalActive"
-			@update-img="updateImg"
+			@update-answer="updateAnswer"
 		/>
 	</fragment>
 </template>
@@ -88,8 +87,7 @@
 				activeIndex: 0,
 				all: 0,
 				quizLink: '',
-				createModalActive: true,
-				updatedData: {},
+				createModalActive: false,
 			}
 		},
 		mounted() {
@@ -104,9 +102,12 @@
 			}); 
 		},
 		methods: {
-			updateImg(url) {
-				console.log('update: ', url, this.questions[this.activeIndex].img)
-				this.questions[this.activeIndex].img = url;
+			updateAnswer(data) {
+				this.questions[this.activeIndex] = {
+					...this.questions[this.activeIndex],
+					...data,
+				}
+				this.$forceUpdate();
 			},
 			shuffle(array) {
 				for (let i = array.length - 1; i > 0; i--) {
@@ -180,7 +181,7 @@
 	}
 </script>
 <style lang="scss" scoped>
-	.test-form {
+	.view__form {
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -188,7 +189,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 0px 0;
-		.input-name {
+		.form__input {
 			width: 80%;
 			max-width: 500px;
 			background: none;
@@ -208,21 +209,7 @@
 				}
 			}
 		}
-		.question__mobile {
-			display: none;
-			width: 100%;
-			margin: 10px 0;
-			font-size: 23px;
-			font-weight: bold;
-			user-select: none;
-			&::first-letter {
-				color: $decorative;
-			}
-			@media (max-height: 500px) {
-				display: block;
-			}
-		}
-		.question {
+		.form__question {
 			position: relative;
 			width: 100%;
 			max-width: 700px;

@@ -10,7 +10,7 @@
 					<fragment v-else>
 						<div class="answer__date">Nikt jeszcze nie rozwiązał tego quizu</div>
 						<div class="answer__title">Chcesz być pierwszy(a)?</div>
-						<Button content="Jasne!" @click="$router.push({name: 'Answer', params: {nick: quizPreview.owner}})" />
+						<Button content="Jasne!" @click="$router.push({name: 'Answer', params: {nick: jwtNick(quizPreview.owner)}})" />
 					</fragment>
 				</div>
 				<div class="answer" v-for="(answer, index) in quizPreview.answers.slice().reverse()" :key="index">
@@ -25,8 +25,8 @@
 		</div>
 		<div class="view" :style="{animation: !$loaded ? 'bottomElation 0.5s 1s both' : 'bottomElation 0.5s both'}">
 			<div class="search__field">
-				<fa-icon class="search__field__icon" icon="search" />
-				<input class="search__field__input" type="search" placeholder="Wyszukaj znajomych..." @keyup="search" />
+				<fa-icon class="field__icon" icon="search" />
+				<input class="field__input" type="search" placeholder="Wyszukaj znajomych..." @keyup="search" />
 			</div>
 			<div class="quizzes">
 				<fragment v-if="quizzesResults === '...'">
@@ -212,12 +212,12 @@
 		margin: 0 auto 20px auto;
 		display: flex;
 		align-items: center;
-		.search__field__icon {
+		.field__icon {
 			font-size: 22px;
 			color: $decorative;
 			margin-right: 10px;
 		}
-		.search__field__input {
+		.field__input {
 			width: 100%;
 			background: none;
 			border: none;
