@@ -36,6 +36,11 @@ const routes = [
 		component: () => import('@/Views/Contact')
 	},
 	{
+		path: '/scropper',
+		name: 'Contact',
+		component: () => import('@/Views/Scropper')
+	},
+	{
 		path: '*',
 		name: 'NotFound',
 		component: () => import('@/Views/NotFound')
