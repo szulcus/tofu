@@ -1,8 +1,8 @@
 <template>
 	<div class="create-modal">
 		<fa-icon class="modal__close" icon="times" @click="$emit('close')" />
-		<div>
-			<label class="modal__input">
+		<div class="modal__inputs">
+			<label class="input">
 				<input
 					class="input__item"
 					type="text"
@@ -10,7 +10,7 @@
 					v-model="localRefunds.direct"
 				/>
 			</label>
-			<label class="modal__input">
+			<label class="input">
 				<span class="input__pre">
 					Czy on(a)
 				</span>
@@ -142,7 +142,7 @@
 		background-color: $bg;
 		z-index: 2;
 		animation: opacity 0.2s ease;
-		padding: 50px 0;
+		padding: 30px 0;
 		@include scroll;
 		.modal__close {
 			position: absolute;
@@ -154,35 +154,38 @@
 				opacity: 0.7;
 			}
 		}
-		.modal__input {
-			width: min(400px, 100%);
-			display: flex;
-			align-items: center;
-			.input__pre {
-				white-space: nowrap;
-				margin-right: 5px;
-				font-weight: bold;
-			}
-			.input__item {
-				flex: 1;
-				max-width: 100%;
-				border: none;
-				border-bottom: 3px solid $decorative;
-				background-color: transparent;
-				outline: none;
-				text-align: center;
-				margin: 10px 0;
-				font-weight: bold;
-				font-size: 18px;
-				&::placeholder {
-					text-align: center;
+		.modal__inputs {
+			width: min(600px, 90%);
+			.input {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				.input__pre {
+					white-space: nowrap;
+					margin-right: 5px;
 					font-weight: bold;
-					transition: 0.3s ease;
 				}
-				&:focus {
+				.input__item {
+					flex: 1;
+					max-width: 100%;
+					border: none;
+					border-bottom: 3px solid $decorative;
+					background-color: transparent;
+					outline: none;
+					text-align: center;
+					margin: 10px 0;
+					font-weight: bold;
+					font-size: 18px;
 					&::placeholder {
-						opacity: 0;
-						letter-spacing: 2px;
+						text-align: center;
+						font-weight: bold;
+						transition: 0.3s ease;
+					}
+					&:focus {
+						&::placeholder {
+							opacity: 0;
+							letter-spacing: 2px;
+						}
 					}
 				}
 			}
@@ -228,18 +231,18 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			margin: 20px 0;
+			margin: 10px 0;
 			.cropper__item {
 				width: 300px;
 				height: 200px;
-				margin: 20px;
+				margin: 10px;
 				border-radius: 20px;
 				overflow: hidden;
 			}
 			.cropper__preview {
 				width: 300px;
 				height: 200px;
-				margin: 20px;
+				margin: 10px;
 				object-fit: cover;
 				transition: 0.3s ease;
 				border-radius: 20px;
